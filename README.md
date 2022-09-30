@@ -1,9 +1,13 @@
 # Store_distribuerte_datamengder
 
 Assignment 2 - MySQL
+
 Group: 22
+
 Students: Simen Tvete Aabol, Hedda Sofie Tellefsen, and Marcus Klomsten Dragsten
+
 Introduction
+
 The tasks given are split into three, where Simen and Marcus mainly did task one, and Hedda did task two. The whole group worked together on writing the report in task three.
 Task one addressed the insertion of data from the Geolife dataset into our MySQL database. The first problem we solved was which data we would want to pass into the database. After deliberating we landed on excluding data, we deemed invalid. Firstly, we only kept the data from users that labeled their activity that matched with the activities’ start- and end times. We did include, on the other hand, all the data from the users that had not labeled their activities. Another exclusion, that affected all the data, was the exclusion of activity-files that contained over 2500 lines of track points. More of this is in the results part of the report, but we managed to decrease the number of track points from 24 million to about 5,3 million.
 Lastly, the method of inserting the data into the database was essential for completing task one. Our first implementation added the track points one by one using a for loop. This was very inefficient, so we changed the method to add the track points into a list of tuples, and then add multiple track points at a time. This was the only complication we phased in this task. Adding the users and activities was much simpler.
